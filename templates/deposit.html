@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}TestEx | Make deposit{% endblock %}
+
+{% block navbar_links %}
+    <li class="nav-item"><a class="nav-link" href="{{ url_for('pages.documentation') }}">Documentation</a></li>
+    <li class="nav-item active"><a class="nav-link" href="{{ url_for('pages.deposit') }}">Make Deposit</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="py-5 text-center">
+    <h2>Deposit Form</h2>
+    <p class="lead">All fields are required</p>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form action="" method="post">
+            <div class="mb-3">
+                {{ form.api_key.label }}
+                {{ form.api_key(size=32, class_="form-control") }}
+                {% for error in form.api_key.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                {{ form.amount.label }}
+                {{ form.amount(size=32, class_="form-control") }}
+                {% for error in form.amount.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                {{ form.currency.label }}
+                {{ form.currency(size=32, class_="form-control") }}
+                {% for error in form.currency.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <hr class="mb-4 mt-4">
+            {{ form.submit(class_="btn btn-primary btn-lg btn-block") }}
+        </form>
+    </div>
+</div>
+{% endblock %}

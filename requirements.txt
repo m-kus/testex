@@ -1,0 +1,13 @@
+flask==1.0.2
+requests>=2.20.0
+simplejson==3.15.0
+pymongo==3.7.2
+cachetools==3.0.0
+flask_pymongo==2.2.0
+gunicorn==19.7.1
+mistune==0.8.4
+flask_wtf==0.14.2
+tabulate==0.8.2
+flask_testing==0.7.1
+parameterized==0.6.1
+mongomock==3.14.0

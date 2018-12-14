@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  mongo:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    expose:
+      - 27017
+    ports:
+      - 127.0.0.1:27018:27017
+    networks:
+      intranet:
+        ipv4_address: 172.28.0.101
+
+  testex:
+    container_name: testex
+    image: testex
+    build: .
+    restart: always
+    expose:
+      - 8008
+    ports:
+      - 127.0.0.1:8008:8008
+    depends_on:
+      - mongo
+    networks:
+      intranet:
+        ipv4_address: 172.28.0.102
+
+networks:
+  intranet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.28.0.0/24
