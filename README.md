@@ -1,5 +1,5 @@
 # TestEx
-[![Build Status](https://img.shields.io/travis-ci/m-kus/testex.svg?branch=master)](https://travis-ci.com/m-kus/testex)
+[![Build Status](https://travis-ci.com/m-kus/testex.svg?branch=master)](https://travis-ci.com/m-kus/testex)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/m-kus/testex.svg?)](https://codeclimate.com/github/m-kus/testex/maintainability)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6869fca21474a82a50b04e474ba63e4?)](https://www.codacy.com/app/m-kus/testex)
 [![Made With](https://img.shields.io/badge/made%20with-python-blue.svg?)](https://www.python.org)
